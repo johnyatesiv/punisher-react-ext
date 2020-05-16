@@ -1,0 +1,29 @@
+{
+    "name": "Punisher Care React Extension",
+    "version": "1.0",
+    "description": "Replace care reacts with Frankface care reacts on Facebook",
+    "manifest_version": 2,
+    "page_action": {
+      "default_icon": {
+        "16": "images/frankface16.png",
+        "32": "images/frankface32.png",
+        "48": "images/frankface48.png",
+        "128": "images/frankface128.png"
+      }
+    },
+    "icons": {
+      "16": "images/frankface16.png",
+      "32": "images/frankface32.png",
+      "48": "images/frankface48.png",
+      "128": "images/frankface128.png"
+    },
+    "content_scripts": [
+	{
+		"matches": ["https://*.facebook.com/*"],
+		"js": ["/scripts/content.js"]
+	}
+    ],
+    "web_accessible_resources" : [ 
+	"images/*.png" 
+    ] 
+}
